@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    background-color: #F3F5FC;
+}
+
+header {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.caja {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    align-items: center;
+    margin: 7%;
+}
+
+#ahorcado {
+    height: 380px;
+    width: 800px;
+}
+
+.caja2 {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    align-items: center;
+    margin: 3%;
+}
+
+.caja3 {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    align-items: center;
+}
+
+.invisible {
+    display:none !important;
+}
+
+.boton1 {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #0A3871;
+    border: none;
+    color: white;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.boton1:hover {
+    background-color: #E5E5E5;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+div {
+    margin-bottom: 2%;
+}
+
+.boton2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: #E5E5E5;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+}
+
+.boton2:hover {
+    background-color: #0A3871;
+    border: none;
+    color: white;
+}
+
+button:active {
+    opacity: 80%;
+}
+
+.boton {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
+    font-size: x-large;
+}
+
+textarea::placeholder {
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
+    font-size: x-large;
+}
+
+.boton:active {
+    opacity: 80%;
+}
+
+.boton3 {
+    background-color: #0A3871;
+    color: white;
+    border: none;
+}
+
+.boton3:hover {
+    background-color: #E5E5E5;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+
+.boton4 {
+    background-color: #E5E5E5;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.boton4:hover {
+    background-color: #0A3871;
+    color: white;
+    border: none;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    background-color: #0A3871;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+}
+
+.redes {
+    width: 25px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

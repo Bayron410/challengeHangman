@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="/images/Vector.svg" alt="Alura">
+        </header>
+        <div id="inicio" class="caja invisible">
+            <div>
+                <button class="boton1">Iniciar juego</button>
+            </div>
+            <div>
+                <button class="boton2">Agregar nueva palabra</button>
+            </div>
+        </div>
+
+        <div id="a-palabra" class="caja2 invisible">
+            <div>
+                <textarea name="palabra" id="palabra" cols="30" rows="9" placeholder="Ingrese una palabra"></textarea>
+            </div>
+            <div>
+                <button class="boton boton3">Guardar y empezar</button>
+                <button class="boton boton4">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="juego" class="caja3">
+            <div>
+                <canvas id="ahorcado"></canvas>
+            </div>
+            <div>
+                <button class="boton boton3">Nuevo juego</button>
+                <button class="boton boton4">Desistir</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Todos los derechos reservados
+                <a href="mailto:bayron410@gmail.com" class="link"> Bayron410 </a>
+                <a href="https://github.com/Bayron410">
+                    <img src="/images/github.png" alt="GitHub" class="redes">
+                </a>
+                <a href="https://www.linkedin.com/in/john-casta%C3%B1eda">
+                    <img src="/images/linkedin.png" alt="LinkedIn" class="redes">
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
