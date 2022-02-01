@@ -17,10 +17,9 @@ header {
     margin: 7%;
 }
 
-#ahorcado {
-    height: 380px;
-    width: 800px;
-}
+/* #ahorcado {
+    background-color: rgb(231, 135, 10);
+} */
 
 .caja2 {
     display: flex;
@@ -60,7 +59,7 @@ header {
 }
 
 div {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .boton2 {
@@ -102,12 +101,14 @@ textarea {
     font-family: 'Inter', sans-serif;
     color: #0A3871;
     font-size: x-large;
+    text-transform: uppercase;
 }
 
 textarea::placeholder {
     font-family: 'Inter', sans-serif;
     color: #0A3871;
     font-size: x-large;
+    text-transform: none;
 }
 
 .boton:active {
@@ -142,7 +143,7 @@ textarea::placeholder {
 
 /* Footer */
 footer {
-    position: fixed;
+    position: relative;
     background-color: #0A3871;
     bottom: 0;
     width: 100%;
@@ -153,6 +154,10 @@ footer {
     margin-top: 10px;
     font-family: 'Inter', sans-serif;
     justify-content: center;
+}
+
+.footer {
+    position: relative !important;
 }
 
 .redes {

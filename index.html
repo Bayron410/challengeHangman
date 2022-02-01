@@ -14,32 +14,35 @@
         <header>
             <img src="/images/Vector.svg" alt="Alura">
         </header>
-        <div id="inicio" class="caja invisible">
+        <!-- Div de inicio -->
+        <div id="inicio" class="caja">
             <div>
-                <button class="boton1">Iniciar juego</button>
+                <button class="boton1" id="boton-iniciar">Iniciar juego</button>
             </div>
             <div>
-                <button class="boton2">Agregar nueva palabra</button>
+                <button class="boton2" id="agregar-palabra">Agregar nueva palabra</button>
             </div>
         </div>
 
+        <!-- Div de agregar palabra -->
         <div id="a-palabra" class="caja2 invisible">
             <div>
                 <textarea name="palabra" id="palabra" cols="30" rows="9" placeholder="Ingrese una palabra"></textarea>
             </div>
             <div>
-                <button class="boton boton3">Guardar y empezar</button>
-                <button class="boton boton4">Cancelar</button>
+                <button class="boton boton3" id="guardar">Guardar y empezar</button>
+                <button class="boton boton4" id="cancelar">Cancelar</button>
             </div>
         </div>
 
-        <div id="juego" class="caja3">
+        <!-- Div de juego -->
+        <div id="juego" class="caja3 invisible">
             <div>
-                <canvas id="ahorcado"></canvas>
+                <canvas id="ahorcado" height="400px" width="800px"></canvas>
             </div>
             <div>
-                <button class="boton boton3">Nuevo juego</button>
-                <button class="boton boton4">Desistir</button>
+                <button class="boton boton3" id="nuevo-juego">Nuevo juego</button>
+                <button class="boton boton4" id="desistir">Desistir</button>
             </div>
         </div>
     </main>
@@ -56,6 +59,7 @@
             </p>
         </div>
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
