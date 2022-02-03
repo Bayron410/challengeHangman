@@ -1,12 +1,17 @@
+// Botones de la pagina
 let botonIniciar = document.querySelector("#boton-iniciar");
 let agregarPalabra = document.querySelector("#agregar-palabra");
 let guardar = document.querySelector("#guardar");
 let cancelar = document.querySelector("#cancelar");
 let nuevoJuego = document.querySelector("#nuevo-juego");
 let desistir = document.querySelector("#desistir");
+
+// Secciones del juego
 let inicio = document.querySelector("#inicio");
 let aPalabra = document.querySelector("#a-palabra");
 let juego = document.querySelector("#juego");
+let footer = document.querySelector("footer");
+
 let listaDePalabras = [
   "ORACLE",
   "ALURA",
@@ -24,10 +29,13 @@ let flag = false;
 let palabraJuego;
 let contadorLetraError = 0;
 let listadoLetras = [];
+let palabraEnJuego = [];
+let esGanador = false;
 
 botonIniciar.addEventListener("click", () => {
   inicio.classList.add("invisible");
   juego.classList.remove("invisible");
+  footer.classList.add("footer");
   empezarJuego();
   flag = true;
 });
@@ -45,6 +53,7 @@ guardar.addEventListener("click", () => {
       listaDePalabras.push(palabra.value.toUpperCase());
       aPalabra.classList.add("invisible");
       juego.classList.remove("invisible");
+      footer.classList.add("footer");
       empezarJuego();
       flag = true;
     }
@@ -56,12 +65,14 @@ guardar.addEventListener("click", () => {
 cancelar.addEventListener("click", () => {
   aPalabra.classList.add("invisible");
   inicio.classList.remove("invisible");
+  footer.classList.remove("footer");
   flag = false;
 });
 
 desistir.addEventListener("click", () => {
   juego.classList.add("invisible");
   inicio.classList.remove("invisible");
+  footer.classList.remove("footer");
   flag = false;
 });
 
@@ -72,7 +83,6 @@ nuevoJuego.addEventListener("click", () => {
 
 window.addEventListener("keydown", (element) => {
   if (flag && validarLetra(element.key) && contador < 9) {
-    console.log(listadoLetras);
     if (!listadoLetras.includes(element.key.toUpperCase())) {
       listadoLetras.push(element.key.toUpperCase());
       if(!dibujarLetra(element.key.toUpperCase())){
@@ -83,6 +93,8 @@ window.addEventListener("keydown", (element) => {
       swal("¡Letra repetida!", `Ha ingresado "${element.key.toUpperCase()}" nuevamente`, "warning");
     }
   } else if (contador >= 9) {
-    swal("¡Has perdido!", "Dale a nuevo juego si quieres volver a jugar.", "info");
+    swal("¡Has perdido!", `La palabra era ${palabraJuego.join("")}, dale a nuevo juego si quieres volver a jugar.`, "info");
+  } else if (esGanador) {
+    swal("¡Has ganado!", "Dale a nuevo juego si quieres volver a jugar.", "success");
   }
 });
