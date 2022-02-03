@@ -23,6 +23,7 @@ let contador = 0;
 let flag = false;
 let palabraJuego;
 let contadorLetraError = 0;
+let listadoLetras = [];
 
 botonIniciar.addEventListener("click", () => {
   inicio.classList.add("invisible");
@@ -38,11 +39,18 @@ agregarPalabra.addEventListener("click", () => {
 });
 
 guardar.addEventListener("click", () => {
-  listaDePalabras.push(palabra.value.toUpperCase());
-  aPalabra.classList.add("invisible");
-  juego.classList.remove("invisible");
-  empezarJuego();
-  flag = true;
+  
+  if(!(palabra.value.length > 8)) {
+    if(validarPalabra(palabra.value.toUpperCase())) {
+      listaDePalabras.push(palabra.value.toUpperCase());
+      aPalabra.classList.add("invisible");
+      juego.classList.remove("invisible");
+      empezarJuego();
+      flag = true;
+    }
+  } else {
+    swal("¡Palabra extensa!", `La palabra debe tener maximo 8 letras y tiene ${palabra.value.length} letras.`, "warning");
+  }
 });
 
 cancelar.addEventListener("click", () => {
@@ -63,11 +71,18 @@ nuevoJuego.addEventListener("click", () => {
 });
 
 window.addEventListener("keydown", (element) => {
-  if (flag) {
-    console.log(palabraJuego);
-    if(!dibujarLetra(element.key.toUpperCase())){
-        crearMuneco(contador);
-        contador++;
+  if (flag && validarLetra(element.key) && contador < 9) {
+    console.log(listadoLetras);
+    if (!listadoLetras.includes(element.key.toUpperCase())) {
+      listadoLetras.push(element.key.toUpperCase());
+      if(!dibujarLetra(element.key.toUpperCase())){
+          crearMuneco(contador);
+          contador++;
+      }
+    } else {
+      swal("¡Letra repetida!", `Ha ingresado "${element.key.toUpperCase()}" nuevamente`, "warning");
     }
+  } else if (contador >= 9) {
+    swal("¡Has perdido!", "Dale a nuevo juego si quieres volver a jugar.", "info");
   }
 });

@@ -6,11 +6,13 @@ function crearMuneco(counter) {
         counter++;
         return counter;
     } else if(counter == 1) {
+        pincel.moveTo(200, 50);
         pincel.lineTo(300, 50);
         pincel.stroke();
         counter++;
         return counter;
     } else if(counter == 2) {
+        pincel.moveTo(300, 50);
         pincel.lineTo(300, 70);
         pincel.stroke();
         counter++;
@@ -29,6 +31,7 @@ function crearMuneco(counter) {
         counter++;
         return counter;
     } else if(counter == 5) {
+        pincel.moveTo(300, 190);
         pincel.lineTo(270, 220); //270
         pincel.stroke();
         counter++;
@@ -50,6 +53,7 @@ function crearMuneco(counter) {
         pincel.lineTo(330, 160);
         pincel.stroke();
         counter++;
+        swal("¡Has perdido!", "Dale a nuevo juego si quieres volver a jugar.", "info");
         return counter;
     } else {
         return;

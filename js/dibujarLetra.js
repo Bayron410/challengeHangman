@@ -12,8 +12,8 @@ function dibujarLetra(letra) {
     if(indicador == 0) {
         pincel.beginPath();
         pincel.fillStyle = "#0A3871";
-        pincel.font = "regular 30px 'Inter'";
-        pincel.fillText(letra, (305 + (40 * contadorLetraError)), 390);
+        pincel.font = "bold 50px 'Inter'";
+        pincel.fillText(letra, (255 + (60 * contadorLetraError)), 390);
         contadorLetraError++;
         return false;
     } else {
