@@ -11,9 +11,9 @@ function empezarJuego() {
     contador = 0;
     contadorLetraError = 0;
     listadoLetras = [];
+    esGanador = false;
     let numero = Math.floor(Math.random()*listaDePalabras.length);
     palabraJuego = listaDePalabras[numero].toUpperCase().split("");
-    console.log(palabraJuego);
     for(let i=0; i < palabraJuego.length; i++) {
         pincel.moveTo((300 + (60 * i)), 300);
         pincel.lineTo((350 + (60 * i)), 300);

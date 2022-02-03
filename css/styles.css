@@ -17,10 +17,6 @@ header {
     margin: 7%;
 }
 
-/* #ahorcado {
-    background-color: rgb(231, 135, 10);
-} */
-
 .caja2 {
     display: flex;
     flex-direction: column;
@@ -143,7 +139,7 @@ textarea::placeholder {
 
 /* Footer */
 footer {
-    position: relative;
+    position: fixed;
     background-color: #0A3871;
     bottom: 0;
     width: 100%;
