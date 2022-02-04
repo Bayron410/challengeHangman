@@ -53,7 +53,8 @@ function crearMuneco(counter) {
         pincel.lineTo(330, 160);
         pincel.stroke();
         counter++;
-        swal("¡Has perdido!", `La palabra era ${palabraJuego.join("")}, dale a nuevo juego si quieres volver a jugar.`, "info");
+        dibujarPerdedor();
+        swal("¡Has perdido!", `La palabra era "${palabraJuego.join("")}", dale a nuevo juego si quieres volver a jugar.`, "info");
         return counter;
     } else {
         return;

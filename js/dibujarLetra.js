@@ -13,7 +13,7 @@ function dibujarLetra(letra) {
         if(palabraJuego.join("") == palabraEnJuego.join("")) {
             flag = false;
             esGanador = true;
-            swal("¡Has ganado!", "Dale a nuevo juego si quieres volver a jugar.", "success");
+            dibujarGanador();
         }
     }
     if(indicador == 0) {

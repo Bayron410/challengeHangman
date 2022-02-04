@@ -12,6 +12,7 @@ function empezarJuego() {
     contadorLetraError = 0;
     listadoLetras = [];
     esGanador = false;
+    palabraEnJuego = [];
     let numero = Math.floor(Math.random()*listaDePalabras.length);
     palabraJuego = listaDePalabras[numero].toUpperCase().split("");
     for(let i=0; i < palabraJuego.length; i++) {

@@ -93,7 +93,8 @@ window.addEventListener("keydown", (element) => {
       swal("¡Letra repetida!", `Ha ingresado "${element.key.toUpperCase()}" nuevamente`, "warning");
     }
   } else if (contador >= 9) {
-    swal("¡Has perdido!", `La palabra era ${palabraJuego.join("")}, dale a nuevo juego si quieres volver a jugar.`, "info");
+    dibujarPerdedor();
+    swal("¡Has perdido!", `La palabra era "${palabraJuego.join("")}", dale a nuevo juego si quieres volver a jugar.`, "info");
   } else if (esGanador) {
     swal("¡Has ganado!", "Dale a nuevo juego si quieres volver a jugar.", "success");
   }
