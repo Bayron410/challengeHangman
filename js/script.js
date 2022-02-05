@@ -73,6 +73,7 @@ desistir.addEventListener("click", () => {
   juego.classList.add("invisible");
   inicio.classList.remove("invisible");
   footer.classList.remove("footer");
+  esGanador = false;
   flag = false;
 });
 
